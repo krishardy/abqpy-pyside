@@ -157,6 +157,7 @@ class GregoryLeibniz(object):
             # self.in_queue.task_done()  # task_done not in multiprocessing.Queue
 
     def calculate(self, iterations):
+        "%s %.8f" % ("hi", 1)
         pi = 0.0
         for i in xrange(iterations):
             if i % 2 == 0:

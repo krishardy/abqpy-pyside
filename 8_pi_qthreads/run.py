@@ -129,7 +129,7 @@ class GregoryLeibniz(QtCore.QObject):
     @QtCore.Slot(int)
     def calculate(self, iterations):
         #logging.debug(QtCore.QThread.currentThreadId())
-        # logging.debug(self.currentThread())
+        #logging.debug(self.currentThread())
         pi = 0.0
         for i in xrange(iterations):
             if i % 2 == 0:

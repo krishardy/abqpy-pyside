@@ -1,6 +1,9 @@
 import sys
+import logging
 
 from PySide import QtGui, QtCore
+
+logging.basicConfig(level=logging.DEBUG)
 
 class MainWindow(QtGui.QMainWindow):
     #: Use this signal to update the status bar message
@@ -75,12 +78,13 @@ class MainWindow(QtGui.QMainWindow):
 
     @QtCore.Slot()
     def on_help(self):
-        QtGui.QMessageBox.information(self,
+        return_value = QtGui.QMessageBox.information(self,
                 "Help",
                 "Press Start to start processing.  Press Stop to stop "
                 "processing.  Press Quit to exit the program.",
-                QtGui.QMessageBox.Ok,
+                QtGui.QMessageBox.Ok | QtGui.QMessageBox.Cancel,
                 QtGui.QMessageBox.Ok)
+        logging.debug(return_value)
 
 
 if __name__ == "__main__":

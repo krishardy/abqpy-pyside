@@ -8,7 +8,7 @@ class MainWindow(QtGui.QMainWindow):
         Initialize the main window
         """
         super(MainWindow, self).__init__()
-        self.setWindowTitle("2: MainWindow")
+        self.setWindowTitle("3: MainWindow")
 
         centralWidget = QtGui.QWidget(self)
 
